@@ -1,0 +1,26 @@
+#!/bin/bash
+if [ $# -lt 1 ]
+   then
+        echo "usage:    $0 patern [ full/name(default)/ip"
+        exit 99
+fi
+
+LOOKUP=$1
+CLEAN=$2
+DATACENTERS="DC1 DC2 DC3"
+YOUR_DOMAIN=
+
+for DOMAIN in  ${DATACENTERS}
+
+do
+    case "${CLEAN}" in 
+    full)
+           host -l ${DOMAIN}.${YOUR_DOMAIN} |grep ${LOOKUP} ;;
+    name|clean)
+           host -l ${DOMAIN}.${YOUR_DOMAIN} |grep ${LOOKUP} | awk '{print $1}';;
+    ip )
+       host -l ${DOMAIN}.${YOUR_DOMAIN} |grep ${LOOKUP} | awk '{print $NF}';;
+    *)
+          host -l ${DOMAIN}.${YOUR_DOMAIN} |grep ${LOOKUP}  | awk '{print $1}' ;;
+    esac
+done
