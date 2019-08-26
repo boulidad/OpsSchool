@@ -1,0 +1,4 @@
+MY_HOME=/home/yaron
+alias ysql='psql --host=qa-postgres.cujriphzbzao.eu-west-1.rds.amazonaws.com  --dbname=postgres'
+alias cdscripts="cd ${MY_HOME}/scripts"
+alias cdlogs="cd ${MY_HOME}/logs"
