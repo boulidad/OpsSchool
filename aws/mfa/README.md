@@ -11,7 +11,7 @@ let the script do it for you:
 run this command: (it will do what is listed in the manual part)
 
 
-doenload the gen_set_MFA_credentials.sh file and run it
+download the `gen_set_MFA_credentials.sh`  file and run it
 
 you will be asked to add these variables
 
