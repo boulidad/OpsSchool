@@ -15,9 +15,9 @@ download the `gen_set_MFA_credentials.sh`  file and run it
 
 you will be asked to add these variables
 
-`AWS_ID = XXXXXXXX
+`AWS_ID = XXXXXXXX`
 
-AWS_USERNAME.  -  ${YOUR AWS USERNAME} `
+`AWS_USERNAME  -  ${YOUR AWS USERNAME} `
 
 
 ## use mfa on cli:
